@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	background-color: var(--background-color);
+	/* gap: var(--gap-value); */
+	/* font-size: 115%; */
+	/* font-family: "Inter", sans-serif; */
+}
+
+ul,
+p,
+label {
+	margin: 0;
+	color: white;
+}
+
+:root {
+	--background-color: #181818ff;
+	--button-color-disabled: #666666;
+	--button-color-available: #cccccc;
+	--button-color-enabled: #00ff00ff;
+	--gap-value: 5px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: var(--gap-value);
+	margin: 20px;
+	max-width: 800px;
+}
+
+.items-grid {
+	/* background-color: red; */
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: var(--gap-value);
+}
+
+button {
+	border-style: none;
+	border-radius: 5px;
+	font-weight: bold;
+	/* color: white; */
+	/* width: fit-content; */
+}
+
+.disabled {
+	background-color: var(--button-color-disabled);
+}
+
+.available {
+	background-color: var(--button-color-available);
+}
+
+#empty {
+	background-color: transparent;
+}
+
+.weapons-area {
+	/* background-color: purple; */
+	grid-area: 1 / 1 / 4 / 5;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: var(--gap-value);
+}
+
+.grenade-area {
+	/* background-color: blue; */
+	grid-area: 4 / 1 / 4 / 6;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: var(--gap-value);
+}
+
+.flashbang-area {
+	/* background-color: red; */
+	display: flex;
+	gap: var(--gap-value);
+}
+
+.flashbang-area button {
+	flex: 1;
+}
+
+.vest-area {
+	/* background-color: green; */
+	grid-area: 1 / 5 / 4 / 5;
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-value);
+}
+
+.vest-area button {
+	flex-grow: 1;
+}
+
+.items-grid button {
+	padding: 7.5%;
+}
+
+.items-grid button img {
+	max-width: 100%;
+	height: auto;
+}
+
+.options-menu {
+	/* background-color: red; */
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-value);
+	width: 100%;
+	max-width: 200px;
+}
+
+.options-menu input {
+	text-align: center;
+}
+
+.options-menu section {
+	display: flex;
+	gap: var(--gap-value);
+	/* width: 1fr; */
+}
+
+.options-menu section button {
+	flex: 1;
+	padding: var(--gap-value);
+}
